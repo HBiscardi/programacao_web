@@ -1,7 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
+
+
+  
+  body {
+    font-family: Helvetica;
+  }
+  header {
+    padding: 30px;
+    border-style: groove;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+  }
+section {
+    display: -webkit-flex;
+    display: flex;
+
+ }
+ nav {
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 2;
+    background: #ccc;
+    padding: 20px;
+    image-rendering: auto;
+  }
+  aside{
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 2;
+    background: #ccc;
+    padding: 20px;
+    
+  }
+  
+  /* Style the content */
+  article {
+    -webkit-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: rgba(38, 167, 16, 0.575);
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 1200px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
