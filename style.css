@@ -1,58 +1,193 @@
-
-
-  
-  body {
-    font-family: Helvetica;
-  }
-  header {
-    padding: 30px;
-    border-style: groove;
-    text-align: center;
-    font-size: 35px;
-    color: rgb(0, 0, 0);
-  }
-section {
-    display: -webkit-flex;
-    display: flex;
-
- }
- nav {
-    -webkit-flex: 4;
-    -ms-flex: 4;
-    flex: 2;
-    background: #ccc;
-    padding: 20px;
-    image-rendering: auto;
-  }
-  aside{
-    -webkit-flex: 4;
-    -ms-flex: 4;
-    flex: 2;
-    background: #ccc;
-    padding: 20px;
+ 
+  .home {
+    font-family: arial;
+    background-image:linear-gradient(white 400px,yellow,orange, red, black);
     
   }
-  
-  /* Style the content */
-  article {
-    -webkit-flex: 6;
-    -ms-flex: 6;
-    flex: 6;
-    background-color: #f1f1f1;
-    padding: 20px;
+
+  .Alfa {
+   
+    background-image : url('imagens/Alfa_logo.jpg');  
+    
   }
+  .Alpha {
+   
+    background-image : url('imagens/scuderia-alphatauri-f1-logo-ws.jpg');
+    image-rendering: auto; 
+  }
+  .Alpine {
+   
+    background-image : url('imagens/Alpine\ Logo.jpg');
+    image-rendering: auto; 
+  }
+  .Aston {      
+    background-image : url('imagens/Aston-Martin-logo.jpg');
+    image-rendering: auto;     
+  }
+  .TituloAston{
+    color: greenyellow;
+    text-align: left;
+  }
+  .Ferrari {       
+    background-image : url('imagens/Ferrari\ logo.jpg');
+    image-rendering: auto; 
+  }
+  .Haas {
+
+    background-image: url('imagens/Haas-2021-Wallpaper.jpg');
+    image-rendering: auto;
+  }
+  .Mclaren {
+    background-image: url('imagens/MclarenLogo.jpg');
+    image-rendering: auto;
+  }
+  .TituloMclaren{
+    color: whitesmoke;
+    text-align: left;
+  }
+  .Mercedes{
+
+    background-image: url('imagens/mercedes-f1-logo-1.jpg');
+    image-rendering: auto;
+  }
+  .RBR{
+    background-image: url('imagens/red-bull-racing-logo-1.jpg');
+    image-rendering: auto;
+  }
+  .Willians{
+    background-image: url('imagens/williams\ logo.jpg');
+    image-rendering: auto;
+  }
+
+  h1{   
+  text-align: center; 
+  } 
   
+ .left{  
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 1200px;
+  height: 550px;
+  background-image:linear-gradient(white, gray);
+  padding-left: 5px;
+  text-decoration:none royalblue;
+ }
+ .center{
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: auto;
+  height: 550px;
+  background-image:linear-gradient(white, gray);
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: justify; 
+  margin-left: 2px;
+  margin-right: 2px;
+ }
+ .rigth{
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 1200px;
+  height: 550px;
+  background-image:linear-gradient(white, gray);
+  padding-left: 5px;
+  
+ }
+ div{
+  display: flex; 
+
+ }
+ 
+ header{
+  width: auto;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-image:linear-gradient(white, black, red,rgb(0, 252, 0),
+  white,rgb(0, 252, 0), red,black,white);  
+ }
+ nav{
+  width: auto;
+  height: 5px;  
+  display:flex;
+  
+ 
+ }
   /* Style the footer */
-  footer {
-    background-color: rgba(38, 167, 16, 0.575);
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
+  footer {   
+   
+    width: auto;
+    height: 250px;
+    border-radius: 15px;
+    text-align: center;   
+    background-image: url('imagens/pirelli2012.jpg');    
+  } 
   
-  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
   @media (max-width: 1200px) {
     section {
       -webkit-flex-direction: column;
       flex-direction: column;
     }
+  }
+  .slider {
+    display: block;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    position: center;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 200%;
+    width: 100%;
+    vertical-align: center; 
+    padding: 10px;
+}
+.slider input {
+  display: none;
+}
+.slider label {
+  background-color: rgb(247, 4, 4);/* cor dos botões do slider*/
+  bottom: 5px;
+  cursor:progress;
+  display: block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  z-index: 10;
+ 
+}
+/* define a distancia lateral dos botões do slider*/
+.slider li:nth-child(1) label {
+  left: 5px;
+  
+}
+
+.slider li:nth-child(2) label {
+  left: 25px;
+}
+
+.slider li:nth-child(3) label {
+  left: 45px;
+}
+.slider img {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  
+}
